@@ -35,7 +35,7 @@ const MainContent: React.FC = () => {
 export const DefaultLayout: React.FC = () => {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <NavBar />
       <MainContent />
     </BrowserRouter>
