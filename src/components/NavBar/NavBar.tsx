@@ -55,7 +55,7 @@ const useStyles = makeStyles(theme => ({
 export const NavBar: React.FC = () => {
   const classes = useStyles();
   return (
-    <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
+    <AppBar position="static" color="inherit" elevation={0} className={classes.appBar}>
       <Toolbar className={classes.toolbar}>
         <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
           Alexander Buczynsky

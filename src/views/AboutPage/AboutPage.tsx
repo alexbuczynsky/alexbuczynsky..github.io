@@ -41,7 +41,33 @@ export const AboutPage: React.FC = () => {
         </Typography>
         <br />
         <Grid container spacing={4} >
-          <Grid item xs={12} sm={6} md={4}>
+
+          <Grid item xs={12} sm={6} md={3}>
+            <ProjectHighlightCard
+              linkURL='https://new.siemens.com/us/en/products/energy/low-voltage/smart-technology.html'
+              projectDescription={`
+                Historically integrated remote monitoring, configuration, and control have only been available with the inclusion
+                of upstream PMCS, PCS, DCS, or SCADA systems. With the advent of Siemens Sma@rtGear™
+                technology, remote monitoring, configuration, and control are standard features that
+                are integral to the electrical apparatus product.
+              `}
+              projectName='Siemens Sm@rtGear Pro'
+              imageURL='https://assets.new.siemens.com/siemens/assets/api/uuid:1a1739fc-38e1-41c2-b53d-41c6377c0220/width:640/quality:high/version:1567171245/smarttechnology.png'
+            />
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={3}>
+            <ProjectHighlightCard
+              linkURL='https://www.automotiveit.eu/54697-2/news/id-0054697'
+              projectDescription={`
+                Involved with the development of Audi's self-developed automated guided vehicle (AGV) for use in assembly line production at Audi, AG. The scope of the project is part of the vision of Industry 4.0.
+              `}
+              projectName='Audi "Paula" AGV'
+              imageURL='/images/projects/Audi_Dialoge_Web_17_01_Startseite_PaulaonTour.jpg'
+            />
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={3}>
             <ProjectHighlightCard
               linkURL='https://apps.apple.com/us/app/smartgear-mobile/id1467350072'
               projectDescription={`
@@ -54,9 +80,10 @@ export const AboutPage: React.FC = () => {
               imageURL='https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/27/e7/70/27e770d7-397d-734f-b0f5-0866866318f2/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-7.png/690x0w.png'
             />
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
+
+          <Grid item xs={12} sm={6} md={3}>
             <ProjectHighlightCard
-              linkURL='https://github.com/Cloud-Automation/node-modbus'
+              linkURL='https://github.com/Cloud-Automation/node-modbus/tree/v4.0-dev'
               projectDescription={`
                 jsmodbus is a simple Modbus TCP/RTU Client/Server with a simple API.
                 It supports modbus function codes 1 - 6 and 15 and 16.
@@ -65,22 +92,7 @@ export const AboutPage: React.FC = () => {
               imageURL='/images/js-modbus-logo.jpg'
             />
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ProjectHighlightCard
-              linkURL='https://new.siemens.com/us/en/products/energy/low-voltage/smart-technology.html'
-              projectDescription={`
-                Intelligent devices (circuit breakers, relays, meters, etc.) have existed for more than
-                30 years. These devices are self-monitoring, configurable, and communicating, but
-                individually they are only islands of intelligence. Historically integrated remote
-                monitoring, configuration, and control have only been available with the inclusion
-                of upstream PMCS, PCS, DCS, or SCADA systems. With the advent of Siemens Sma@rtGear™
-                technology, remote monitoring, configuration, and control are standard features that
-                are integral to the electrical apparatus product.
-              `}
-              projectName='Siemens Sm@rtGear Pro'
-              imageURL='https://assets.new.siemens.com/siemens/assets/api/uuid:1a1739fc-38e1-41c2-b53d-41c6377c0220/width:640/quality:high/version:1567171245/smarttechnology.png'
-            />
-          </Grid>
+
         </Grid>
       </Container>
 

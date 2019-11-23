@@ -22,7 +22,7 @@
 }
 
 .background-wallpaper {
-  background-image: url(https://www.wallpaperflare.com/static/102/768/990/abstract-justin-maller-blue-orange-wallpaper.jpg);
+  background-image: url(http://www.ecopetit.cat/iconpics/f/29/290104/justin-maller-wallpapers.jpg);
   /* Used if the image is unavailable */
   height: 100vh;
   /* You must set a specified height */
@@ -30,7 +30,17 @@
   /* Center the image */
   background-repeat: no-repeat;
   /* Do not repeat the image */
-  background-size: auto;
+  background-size: cover;
   /* Resize the background image to cover the entire container */
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
 
+}
+
+.everything {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  top: 0;
+  left: 0;
 }

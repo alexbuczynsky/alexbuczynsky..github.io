@@ -4,10 +4,14 @@ export const theme = createMuiTheme({
   palette: {
     primary: {
       // light: will be calculated from palette.primary.main,
-      main: '#00ffaa',
+      main: '#ae00ff',
       // dark: will be calculated from palette.primary.main,
       // contrastText: will be calculated to contrast with palette.primary.main
     },
-    type: 'dark',
+    background: {
+      default: '#efefef',
+      paper: '#efefef'
+    },
+    type: 'light',
   },
 });

@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
     overflow: 'auto',
     height: '90vh',
     padding: theme.spacing(4),
-    opacity: '98%',
+    opacity: '95%',
   }
 }))
 
