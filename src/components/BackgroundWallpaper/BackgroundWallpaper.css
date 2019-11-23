@@ -1,0 +1,21 @@
+.notched-decorator {
+  position: absolute;
+  width: 25px;
+  height: 45px;
+  bottom: 0;
+  left: 85%;
+  background: rgba(108, 242, 212, 1);
+}
+
+.fade-in {
+  animation: fade-in 2s;
+}
+
+@keyframes fade-in {
+  0% {
+    width: 10vw;
+    opacity: 0;
+  }
+
+  100% {}
+}
