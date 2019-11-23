@@ -4,11 +4,39 @@
 }
 
 .profile-avatar {
-  width: 250px;
+  width: 75%;
+  max-width: 250px;
   height: auto;
   border-radius: 100%;
   display: block;
   margin: 1em auto 1em auto;
 }
 
-.AboutPage {}
+.RowContainer {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  display: flex;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.SocialMediaIcon {
+  margin-top: 0.5em !important;
+  margin-right: 1em !important;
+  margin-left: 1em !important;
+  margin-bottom: 0.5em !important;
+}
+
+.SummaryWrapper {
+  margin-top: 1em;
+  padding: 2em;
+}
+
+.SummaryGrid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -89,7 +89,7 @@ export const ProjectsPage: React.FC = () => {
           </Typography>
           <br />
 
-          <YoutubeVideo width='560' height='315' videoURL='https://www.youtube.com/embed/MQfU_-69LzA' />
+          <YoutubeVideo width='100%' height='300px' videoURL='https://www.youtube.com/embed/MQfU_-69LzA' />
 
         </Project>
 
@@ -122,7 +122,7 @@ export const ProjectsPage: React.FC = () => {
           </Typography>
           <br />
 
-          <YoutubeVideo width='560' height='315' videoURL='https://www.youtube.com/embed/e-uZFWph0wQ' />
+          <YoutubeVideo width='100%' height='300px' videoURL='https://www.youtube.com/embed/e-uZFWph0wQ' />
 
           <Divider />
 
@@ -171,7 +171,7 @@ export const ProjectsPage: React.FC = () => {
 
         <Project title='FIRST Robotics Club'>
 
-          <YoutubeVideo width='560' height='315' videoURL='https://www.youtube.com/embed/vAlh5KbqKdM' />
+          <YoutubeVideo width='100%' height='300px' videoURL='https://www.youtube.com/embed/vAlh5KbqKdM' />
           <Typography variant='caption'>
             First Tech Challenge Team 2868 Smoke and Mirrors team video for competition season 2012-2013 "Ring It Up"
           </Typography>

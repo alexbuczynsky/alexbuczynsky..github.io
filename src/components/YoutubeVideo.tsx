@@ -9,11 +9,10 @@ type Props = {
 export const YoutubeVideo: React.FC<Props> = (props) => {
 
   const width = props.width || '560';
-  const height = props.height || '315';
 
   const iframeProps: any = {
     width: width,
-    height: height,
+    height: props.height,
     src: props.videoURL,
     frameborder: "0",
     allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",

@@ -5,7 +5,6 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { ExternalLinkDialog } from '../../components/ExternalLinkDialog';
 
@@ -54,7 +53,7 @@ export const ProjectHighlightCard: React.FC<Props> = (props) => {
           open={open}
           onOpenChange={setOpen}
           size="small"
-          color="primary"
+          color="secondary"
           linkURL={props.linkURL}
         >
           Link to project

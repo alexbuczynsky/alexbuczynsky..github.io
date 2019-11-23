@@ -1,11 +1,14 @@
 import React from 'react'
-import { ListItem, ListItemIcon, ListItemText, Button } from '@material-ui/core'
+import { ListItem, ListItemIcon, ListItemText, Button, Typography, Card, CardHeader, Avatar, IconButton, CardContent, CardActions, Grid } from '@material-ui/core'
 import GitHubIcon from '@material-ui/icons/GitHub';
 
 export type GithubProjectListItemProps = {
   projectName: string;
   projectLink: string;
+  description?: React.ReactNode;
   npmName?: string;
+  role?: 'Owner' | 'Maintainer'
+  personal?: boolean;
 }
 
 export const GithubProjectListItem: React.FC<GithubProjectListItemProps> = (props) => {
@@ -13,25 +16,54 @@ export const GithubProjectListItem: React.FC<GithubProjectListItemProps> = (prop
   const {
     projectName,
     projectLink,
-    npmName
+    npmName,
+    role,
+    description,
   } = props;
 
   return (
-    <ListItem button>
-      <ListItemIcon>
-        <GitHubIcon />
-      </ListItemIcon>
-      <ListItemText primary={projectName} />
-      {
-        npmName &&
-        <ListItemIcon>
-          <img alt="npm" src={`https://img.shields.io/npm/dm/${npmName}`} ></img>
-        </ListItemIcon>
-      }
+    <Grid item xs={12} sm={6} md={4} lg={3}>
+      <Card>
+        <CardHeader
+          avatar={
+            <Avatar aria-label="project-icon">
+              <GitHubIcon />
+            </Avatar>
+          }
+          title={projectName}
+          subheader={
+            <React.Fragment>
+              {role && <div>Role: {role}</div>}
+              {
+                npmName &&
+                <img alt="npm" src={`https://img.shields.io/npm/dm/${npmName}`} ></img>
+              }
+            </React.Fragment>
+          }
+        />
+        <CardContent>
+          <Typography variant='subtitle1' component='div' >
+            <u></u>
+          </Typography>
+          {
+            role &&
+            <Typography variant='subtitle2' component='div'>
 
-      <Button href={projectLink} color="primary" variant="outlined">
-        Project
-      </Button>
-    </ListItem>
+            </Typography>
+          }
+          {
+            description &&
+            <Typography variant='subtitle2' component='div'>
+              {description}
+            </Typography>
+          }
+        </CardContent>
+        <CardActions>
+          <Button href={projectLink} color="secondary" size='medium' variant="outlined">
+            View Code
+        </Button>
+        </CardActions>
+      </Card>
+    </Grid>
   )
 }

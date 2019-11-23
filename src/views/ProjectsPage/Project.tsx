@@ -33,7 +33,7 @@ export const Project: React.FC<Props> = (props) => {
 
   return (
     <Grid item xs={12}>
-      <Card className={classes.card} elevation={5}>
+      <Card className={classes.card} elevation={1}>
 
         <CardHeader
           title={projectTitle}

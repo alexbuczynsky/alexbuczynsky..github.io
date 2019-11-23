@@ -11,8 +11,7 @@ import {
 
 import { Link as RouterLink } from 'react-router-dom';
 
-import GitHubIcon from '@material-ui/icons/GitHub';
-import LinkedIn from '@material-ui/icons/LinkedIn';
+import { PersonalLinkedInIcon, PersonalGitHubIcon } from '../SocialMediaIcons';
 
 const useStyles = makeStyles(theme => ({
   appBar: {
@@ -74,12 +73,9 @@ export const NavBar: React.FC = () => {
             Contact
           </Link>
         </nav>
-        <Button href="https://www.linkedin.com/in/alexbuczynsky/" color="default" variant="outlined" className={classes.link}>
-          <LinkedIn />
-        </Button>
-        <Button href="https://github.com/alexbuczynsky" color="primary" variant="outlined" className={classes.link}>
-          <GitHubIcon />
-        </Button>
+
+        <PersonalLinkedInIcon color="default" size='small' variant="outlined" className={classes.link} />
+        <PersonalGitHubIcon color="default" size='small' variant="outlined" className={classes.link} />
       </Toolbar>
     </AppBar>
   )

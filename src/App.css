@@ -22,7 +22,7 @@
 }
 
 .background-wallpaper {
-  background-image: url(http://www.ecopetit.cat/iconpics/f/29/290104/justin-maller-wallpapers.jpg);
+  /* background-image: url(http://www.ecopetit.cat/iconpics/f/29/290104/justin-maller-wallpapers.jpg); */
   /* Used if the image is unavailable */
   height: 100vh;
   /* You must set a specified height */

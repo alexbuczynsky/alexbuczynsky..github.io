@@ -1,46 +1,87 @@
 import React from 'react'
 import { PageHeaderTypography } from '../../components/MainPageHeader'
-import { Container, Typography, Divider, Grid } from '@material-ui/core'
+import { Paper, Typography, Grid, } from '@material-ui/core'
 import { ProfilePicture } from '../../components/ProfilePictures'
 import { ProjectHighlightCard } from './ProjectHighlightCard'
 import './AboutPage.css'
+import { PersonalLinkedInIcon, PersonalGitHubIcon, PersonalInstagramIcon, PersonalTwitterIcon, PersonalEmailIcon } from '../../components/SocialMediaIcons'
+import { GithubProjectList } from '../ProjectsPage/GithubProjectList'
+import { DownloadResumeButton } from '../../components/DownloadResumeButton'
 
 export const AboutPage: React.FC = () => {
   return (
     <div className='AboutPage'>
       <PageHeaderTypography title='About Me' />
-      <p>
-        <div className='profile-header'>
-          <ProfilePicture className='profile-avatar' />
-          <Typography variant='subtitle1' align='center'>
-            Alexander Buczynsky
-          </Typography>
-        </div>
-      </p>
-      <Divider />
 
-      <Typography variant='body1' align='center'>
-        <p>
-          I am a Software Developer and Cybersecurity Apprentice in Dallas Texas working on and continually
-          learning more about building secure modern industrial applications. I have been writing software
-          since I started tinkering with automating my dorm room back in 2015.
-        </p>
+      <Paper className='SummaryWrapper' elevation={1}>
+        <Typography variant='h4' align='left'>
+          Summary
+        </Typography>
+        <Grid className='SummaryGrid' container spacing={2}>
 
-        <p>
-          Since May 2017 I have been employed at Siemens creating industrial internet of things automation
-          products that specialize in breaker controls and saftey equipment.
-        </p>
-
-      </Typography>
+          <Grid item xs={12} sm={12} md={4}>
+            <p>
+              <div className='profile-header'>
+                <ProfilePicture className='profile-avatar' />
+                <Typography variant='h6' align='center'>
+                  Alexander Buczynsky
+                </Typography>
+                <Typography variant='subtitle1' align='center'>
+                  Mechanical Engineer by degree, Software Engineer by trade, tinkerer by heart.
+                </Typography>
+              </div>
+            </p>
+          </Grid>
 
 
+          <Grid className='ProfileWrapper' item xs={12} sm={12} md={8}>
 
-      <Container>
-        <Typography variant='h5' align='left'>
+            <Typography variant='body1' align='left'>
+              <p>
+                I am an experienced Software Engineer located in Dallas Texas with a demonstrated history of working in the electrical and electronic manufacturing industry.
+                Skilled in Docker, Industrial Communications, Web Development, Microservices, and cloud platforms such as AWS.
+              </p>
+              <p>
+                With a Bachelor of Engineering degree focused in Mechanical Engineering from the
+                University of Florida, I continue to attempt to fuse the worlds of the physical,
+                electrical, and digital.
+              </p>
+
+              <p>
+                Since May 2017 I have been employed at Siemens creating industrial internet of things automation
+                products that specialize in breaker controls and saftey equipment.
+              </p>
+
+            </Typography>
+
+            <div className='RowContainer'>
+              <PersonalLinkedInIcon className='SocialMediaIcon' color='inherit' size='medium' variant='outlined' />
+              <PersonalGitHubIcon className='SocialMediaIcon' color='inherit' size='medium' variant='outlined' />
+              <PersonalInstagramIcon className='SocialMediaIcon' color='inherit' size='medium' variant='outlined' />
+              <PersonalTwitterIcon className='SocialMediaIcon' color='inherit' size='medium' variant='outlined' />
+              <PersonalEmailIcon className='SocialMediaIcon' color='inherit' size='medium' variant='outlined' />
+            </div>
+
+            <div className='RowContainer'>
+              <DownloadResumeButton />
+            </div>
+
+
+          </Grid>
+        </Grid>
+      </Paper>
+
+
+      <Paper className='SummaryWrapper' elevation={1}>
+        <Typography variant='h4' align='left'>
           Project Highlights
         </Typography>
         <br />
+
+        <GithubProjectList />
+        <br />
         <Grid container spacing={4} >
+
 
           <Grid item xs={12} sm={6} md={3}>
             <ProjectHighlightCard
@@ -94,8 +135,8 @@ export const AboutPage: React.FC = () => {
           </Grid>
 
         </Grid>
-      </Container>
+      </Paper>
 
-    </div>
+    </div >
   )
 }

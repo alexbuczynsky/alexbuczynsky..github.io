@@ -10,9 +10,9 @@ const useStyles = makeStyles(theme => ({
   container: {
     marginTop: theme.spacing(2),
     overflow: 'auto',
-    height: '90vh',
+    height: `calc(100vh - ${theme.spacing(13)}px)`,
     padding: theme.spacing(4),
-    opacity: '95%',
+    opacity: '98%',
   }
 }))
 

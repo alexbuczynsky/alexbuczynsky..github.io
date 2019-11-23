@@ -1,8 +1,9 @@
 import React from 'react'
 import { ProfilePicture } from '../../components/ProfilePictures'
-import { makeStyles, Paper, Typography, Divider, List, ListItem, Card, CardContent } from '@material-ui/core'
+import { makeStyles, Paper, Typography, Divider, List, ListItem, Card, CardContent, CardActions } from '@material-ui/core'
 import { PageHeaderTypography } from '../../components/MainPageHeader'
 import { ExperienceList } from './components/ExperienceList'
+import { DownloadResumeButton } from '../../components/DownloadResumeButton'
 
 const useStyles = makeStyles(theme => ({
   profilePicture: {
@@ -20,6 +21,9 @@ export const Resume: React.FC = () => {
       </Paper> */}
 
       <Card>
+        <CardActions>
+          <DownloadResumeButton />
+        </CardActions>
         <CardContent>
           <Typography variant='h4'>
             Experience

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography } from '@material-ui/core'
+import { Typography, Divider } from '@material-ui/core'
 
 interface Props {
   title: string;
@@ -7,8 +7,12 @@ interface Props {
 
 export const PageHeaderTypography: React.FC<Props> = (props) => {
   return (
-    <Typography variant='h4' style={{ marginBottom: '10px' }}>
-      {props.title}
-    </Typography>
+    <React.Fragment>
+      <Typography variant='h4' style={{ marginBottom: '10px' }}>
+        {props.title}
+      </Typography>
+      <Divider />
+    </React.Fragment>
+
   )
 }
