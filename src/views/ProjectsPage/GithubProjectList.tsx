@@ -1,44 +1,57 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Project } from './Project'
-import { Grid, Divider } from '@material-ui/core'
+import { Grid, Divider, LinearProgress } from '@material-ui/core'
 import { GithubProjectListItem, GithubProjectListItemProps } from './GithubProjectListItem'
 
-const GithubProjects: GithubProjectListItemProps[] = [
-  {
-    projectName: 'jsmodbus',
-    projectLink: 'https://github.com/Cloud-Automation/node-modbus',
-    npmName: 'jsmodbus',
-    role: 'Maintainer',
-    description: 'A Typescript library for communicating via the modbus protocol.'
-  },
-  {
-    projectName: 'Node Buffer Tools',
-    projectLink: 'https://github.com/alexbuczynsky/node-buffer-tools',
-    npmName: 'ts-buffer-tools',
-    role: 'Owner',
-    description: 'A Typescript library for manipulating buffer data.'
-  },
-  {
-    projectName: 'Geri Monitor',
-    projectLink: 'https://github.com/alexbuczynsky/GeriMonitor',
-    description: "A project to help the nurses at my grandfather's nursing home know when he gets up at night to prevent him from injuring himself."
-  },
-  {
-    projectName: 'MATLAB-GPS-Calculations',
-    projectLink: 'https://github.com/alexbuczynsky/MATLAB-GPS-Calculations',
-  }
-]
+async function fetchGithubProjects(): Promise<GithubProjectListItemProps[]> {
+  const response = await fetch('/data/github_projects.json');
+  const data = await response.json();
+  return data;
+}
+
+type State = {
+  projects: GithubProjectListItemProps[];
+  isLoading: boolean;
+}
 
 export const GithubProjectList: React.FC = () => {
+  const [state, setState] = useState<State>({
+    isLoading: true,
+    projects: [],
+  });
+
+  useEffect(() => {
+    fetchGithubProjects()
+      .then(data => {
+        // Wait a little longer to show the data to show the loading effect
+        setTimeout(() => {
+          setState({
+            projects: data,
+            isLoading: false,
+          })
+        }, 500)
+
+      })
+      .catch(err => {
+        setState({
+          ...state,
+          isLoading: false,
+        })
+      })
+  }, [])
+
   return (
     <Project title='Open Source Projects'>
 
-      <Grid container spacing={2}>
-        {GithubProjects.map(project => (
+      <LinearProgress hidden={state.isLoading === false} color='secondary' />
+
+      <Grid container spacing={2} style={{ minHeight: '250px' }}>
+        {state.projects.map((project, ii) => (
           <React.Fragment>
             <GithubProjectListItem
               key={project.projectLink}
               {...project}
+              growTimeout={ii * 500 + 250}
             />
             <Divider />
 
