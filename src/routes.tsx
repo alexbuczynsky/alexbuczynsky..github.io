@@ -29,19 +29,19 @@ export const AllRoutes = (
       <ContactPage />
     </Route>
 
-    <Route exact path="/projects/smart-gear-pro">
+    <Route exact path="/projects-smart-gear-pro">
       <SmartGearProProject />
     </Route>
-    <Route exact path="/projects/smart-gear-mobile">
+    <Route exact path="/projects-smart-gear-mobile">
       <SmartGearMobileProject />
     </Route>
-    <Route exact path="/projects/audi-agv">
+    <Route exact path="/projects-audi-agv">
       <AudiAGVProject />
     </Route>
-    <Route exact path="/projects/cad-automation">
+    <Route exact path="/projects-cad-automation">
       <CADAutomationProject />
     </Route>
-    <Route exact path="/projects/first-robotics">
+    <Route exact path="/projects-first-robotics">
       <FIRSTRoboticsProject />
     </Route>
   </React.Fragment>
