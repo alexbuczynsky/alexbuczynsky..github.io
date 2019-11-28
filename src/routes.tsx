@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route } from 'react-router'
+import { Route, Switch } from 'react-router'
 import { Resume } from './views/Home/Resume'
 import { ProjectsPage } from './views/ProjectsPage'
 import { ContactPage } from './views/ContactPage'
@@ -14,35 +14,24 @@ import {
   FIRSTRoboticsProject,
 } from './views/ProjectsPage/projects'
 
-export const AllRoutes = (
-  <React.Fragment>
-    <Route exact path="/">
-      <AboutPage />
-    </Route>
-    <Route exact path="/projects">
-      <ProjectsPage />
-    </Route>
-    <Route exact path="/resume">
-      <Resume />
-    </Route>
-    <Route exact path="/contact">
-      <ContactPage />
-    </Route>
 
-    <Route exact path="/projects-smart-gear-pro">
-      <SmartGearProProject />
-    </Route>
-    <Route exact path="/projects-smart-gear-mobile">
-      <SmartGearMobileProject />
-    </Route>
-    <Route exact path="/projects-audi-agv">
-      <AudiAGVProject />
-    </Route>
-    <Route exact path="/projects-cad-automation">
-      <CADAutomationProject />
-    </Route>
-    <Route exact path="/projects-first-robotics">
-      <FIRSTRoboticsProject />
-    </Route>
-  </React.Fragment>
+const Page404 = ({ location }: { location: any }) => (
+  <div>
+    <h2>No match found for <code>{location.pathname}</code></h2>
+  </div>
+);
+
+export const AllRoutes = (
+  <Switch>
+    <Route path="/" exact component={AboutPage} />
+    <Route path="/projects" exact component={ProjectsPage} />
+    <Route path="/resume" exact component={Resume} />
+    <Route path="/contact" exact component={ContactPage} />
+    <Route path="/projects-smart-gear-pro" component={SmartGearProProject} />
+    <Route path="/projects-smart-gear-mobile" component={SmartGearMobileProject} />
+    <Route path="/projects-audi-agv" component={AudiAGVProject} />
+    <Route path="/projects-cad-automation" component={CADAutomationProject} />
+    <Route path="/projects-first-robotics" component={FIRSTRoboticsProject} />
+    <Route component={Page404} />
+  </Switch>
 )
