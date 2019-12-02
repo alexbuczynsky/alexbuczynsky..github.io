@@ -86,6 +86,11 @@
     "name": "Microsoft.AspNetCore.Mvc",
     "percent": 90
   },
+  {
+    "category": "Back-End Development",
+    "name": "OpenAPI (Swagger)",
+    "percent": 90
+  },
 
   {
     "category": "Front-End Development",
