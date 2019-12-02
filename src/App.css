@@ -8,7 +8,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,7 +47,7 @@
 .background-wallpaper {
   /* background-image: url(http://www.ecopetit.cat/iconpics/f/29/290104/justin-maller-wallpapers.jpg); */
   /* Used if the image is unavailable */
-  height: 100vh;
+  height: 100%;
   /* You must set a specified height */
   background-position: center;
   /* Center the image */
