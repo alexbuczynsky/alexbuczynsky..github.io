@@ -1,13 +1,6 @@
 import React, { CSSProperties } from 'react'
 import {
   makeStyles,
-  Button,
-  Typography,
-  Grid,
-  Card,
-  CardHeader,
-  CardContent,
-  Grow,
 } from '@material-ui/core'
 import './SkillProgressBar.css'
 
@@ -29,14 +22,14 @@ const useStyles = makeStyles(theme => ({
 
 
 
-type Props = React.HTMLAttributes<HTMLDivElement> & {
+export type SkillProgressBarProps = React.HTMLAttributes<HTMLDivElement> & {
   percent: number;
   noAnimation?: boolean;
   variant?: 'primary' | 'secondary';
   timeout?: number;
 }
 
-export const SkillProgressBar: React.FC<Props> = (props) => {
+export const SkillProgressBar: React.FC<SkillProgressBarProps> = (props) => {
 
   const classes = useStyles({})
 

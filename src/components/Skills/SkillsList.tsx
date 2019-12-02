@@ -1,53 +1,101 @@
-import React from 'react'
-import { Button, Typography, Grid, Card, CardHeader, CardContent } from '@material-ui/core'
+import React, { useState, useEffect } from 'react'
+import { Button, Typography, Grid, Card, CardHeader, CardContent, LinearProgress } from '@material-ui/core'
 import { ButtonProps } from '@material-ui/core/Button'
 import { SkillProgressBar } from './SkillProgressBar'
 import { Skill } from './Skill';
+import { ISkill, fetchSkills } from '../../services/data-api';
+import { SkillCategoryCard } from './SkillCategoryCard';
 
 type Props = {
-
+  hideProgressBar?: boolean;
+  variant?: 'default' | 'simple';
 }
 
+type State = {
+  skills: ISkill[];
+}
+
+function sortSkillsByCategory(skills: ISkill[]) {
+  const categories: Record<string, ISkill[]> = {};
+
+  for (const skill of skills) {
+    const {
+      category,
+    } = skill;
+
+    if (!categories[category]) {
+      categories[category] = [];
+    }
+
+    categories[category].push(skill);
+  }
+
+  return {
+    categories,
+    categoryNames: Object.keys(categories),
+  };
+}
+
+
+
 export const SkillsList: React.FC<Props> = (props) => {
+
+  const [state, setState] = useState<State>({
+    skills: [],
+  })
+
+
+  const loadSkills = () => {
+    return fetchSkills()
+      .then(data => {
+        // Wait a little longer to show the data to show the loading effect
+        // setTimeout(() => {
+        //   setState({
+        //     skills: data,
+        //     isLoading: false,
+        //   })
+        // }, 500)
+        setState({
+          skills: data,
+        })
+
+      })
+      .catch(err => {
+        setState({
+          ...state,
+        })
+      })
+  }
+
+  useEffect(() => {
+    loadSkills();
+    setInterval(() => loadSkills(), 500)
+  }, [])
+
+  const { categories, categoryNames } = sortSkillsByCategory(state.skills);
+
   return (
     <Grid container spacing={2}>
 
-      <Grid item xs={12} sm={6} md={4}>
-        <Card elevation={4}>
-          <CardHeader title='Front-End Development' />
-          <CardContent>
-            <Skill variant='body1' description='HTML/CSS' percent={50} />
-            <Skill variant='body1' description='Bootstrap' percent={50} />
-            <Skill variant='body1' description='HTML/CSS' percent={50} />
-            <Typography variant='body1'>
-              HTMl/CSS, Sass, Bootstrap, JavaScript, Jquery, React.js, React Native, and Angular
-            </Typography>
-            <SkillProgressBar percent={60} />
-          </CardContent>
-        </Card>
-      </Grid>
+      {
+        categoryNames.map(category => {
 
-      <Grid item xs={12} sm={6} md={4}>
-        <Card elevation={4}>
-          <CardHeader title='Back-End / Server Design' />
-          <CardContent>
-            <Typography variant='body1'>
-              Docker
-            </Typography>
-          </CardContent>
-        </Card>
-      </Grid>
+          // get the skills and sort by decreasing order of skill proficiency
+          const skills = categories[category];
 
-      <Grid item xs={12} sm={6} md={4}>
-        <Card elevation={4}>
-          <CardHeader title='Front-End Development' />
-          <CardContent>
-            <Typography variant='body1'>
-              HTMl/CSS, Sass, Bootstrap, JavaScript, Jquery, React.js, React Native, and Angular
-            </Typography>
-          </CardContent>
-        </Card>
-      </Grid>
+          return (
+            <Grid key={category} item xs={12} sm={6} md={4}>
+              <SkillCategoryCard
+                key={category}
+                category={category}
+                skills={skills}
+                hideProgressBar={props.hideProgressBar}
+                variant={props.variant}
+              />
+            </Grid>
+          )
+        })
+      }
 
     </Grid>
   )

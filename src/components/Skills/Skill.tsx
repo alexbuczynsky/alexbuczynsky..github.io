@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SkillProgressBar } from './SkillProgressBar';
+import { SkillProgressBar, SkillProgressBarProps } from './SkillProgressBar';
 import { Typography } from '@material-ui/core';
 import { ThemeStyle } from '@material-ui/core/styles/createTypography';
 
@@ -10,6 +10,7 @@ type Props = {
   percent?: number;
   timeout?: number;
   variant?: ThemeStyle;
+  progressBarVariant?: SkillProgressBarProps['variant'];
 }
 
 export const Skill: React.FC<Props> = props => {
@@ -19,7 +20,8 @@ export const Skill: React.FC<Props> = props => {
     percent = 100,
     timeout,
     description,
-    variant = 'body1'
+    variant = 'body1',
+    progressBarVariant = 'primary'
   } = props;
 
   return (
@@ -31,6 +33,7 @@ export const Skill: React.FC<Props> = props => {
         <SkillProgressBar
           percent={percent}
           timeout={timeout}
+          variant={progressBarVariant}
         />}
     </div>
   )
