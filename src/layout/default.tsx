@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavBar } from '../components/NavBar';
 import { Container, Fade, makeStyles, Paper } from '@material-ui/core';
-import { Route, Switch } from "react-router";
+import { Switch } from "react-router";
 import { BrowserRouter } from 'react-router-dom';
 import { AllRoutes } from '../routes';
 

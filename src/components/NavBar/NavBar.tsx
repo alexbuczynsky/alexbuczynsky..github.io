@@ -6,7 +6,6 @@ import {
   Toolbar,
   Typography,
   Link,
-  Button,
 } from '@material-ui/core';
 
 import { Link as RouterLink } from 'react-router-dom';
@@ -65,6 +64,9 @@ export const NavBar: React.FC = () => {
           </Link>
           <Link component={RouterLink} variant="button" color="textPrimary" to="/resume" className={classes.link}>
             Resume
+          </Link>
+          <Link component={RouterLink} variant="button" color="textPrimary" to="/skills" className={classes.link}>
+            Skills
           </Link>
           <Link component={RouterLink} variant="button" color="textPrimary" to="/projects" className={classes.link}>
             Projects

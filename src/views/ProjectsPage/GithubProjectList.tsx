@@ -2,12 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Project } from './Project'
 import { Grid, Divider, LinearProgress } from '@material-ui/core'
 import { GithubProjectListItem, GithubProjectListItemProps } from './GithubProjectListItem'
-
-async function fetchGithubProjects(): Promise<GithubProjectListItemProps[]> {
-  const response = await fetch('/data/github_projects.json');
-  const data = await response.json();
-  return data;
-}
+import { fetchGithubProjects } from '../../services/data-api'
 
 type State = {
   projects: GithubProjectListItemProps[];

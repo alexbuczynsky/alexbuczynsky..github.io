@@ -13,6 +13,7 @@ import {
   CADAutomationProject,
   FIRSTRoboticsProject,
 } from './views/ProjectsPage/projects'
+import { SkillsPage } from './views/SkillsPage'
 
 
 const Page404 = ({ location }: { location: any }) => (
@@ -27,6 +28,7 @@ export const AllRoutes = (
     <Route path="/projects" exact component={ProjectsPage} />
     <Route path="/resume" exact component={Resume} />
     <Route path="/contact" exact component={ContactPage} />
+    <Route path="/skills" exact component={SkillsPage} />
     <Route path="/projects-smart-gear-pro" component={SmartGearProProject} />
     <Route path="/projects-smart-gear-mobile" component={SmartGearMobileProject} />
     <Route path="/projects-audi-agv" component={AudiAGVProject} />

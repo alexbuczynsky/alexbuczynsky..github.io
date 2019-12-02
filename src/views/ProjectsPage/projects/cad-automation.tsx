@@ -3,18 +3,7 @@ import React from 'react';
 import { Project } from '../Project'
 import {
   Typography,
-  Link,
-  Divider,
-  GridList,
-  GridListTile,
-  makeStyles,
-  IconButton,
-  Button,
-  ListItem,
-  ListItemIcon,
-  ListItemText
 } from '@material-ui/core'
-import { YoutubeVideo } from '../../../components/YoutubeVideo'
 
 export const CADAutomationProject: React.FC = () => {
   return (
@@ -36,7 +25,7 @@ export const CADAutomationProject: React.FC = () => {
 
       <Typography variant='h5'>
         Screenshots
-          </Typography>
+      </Typography>
       <a href='/images/projects/driveworks/1.png'>
         <img width='80%' src='/images/projects/driveworks/1.png' />
       </a>

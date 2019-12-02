@@ -1,7 +1,8 @@
 import React from 'react'
 import { PageHeaderTypography } from '../../components/MainPageHeader'
-import { Project } from './Project'
-import { List, Grid, Typography, Link, Divider, GridList, GridListTile, makeStyles, IconButton, Button, ListItem, ListItemIcon, ListItemText } from '@material-ui/core'
+import {
+  Grid,
+} from '@material-ui/core'
 import { YoutubeVideo } from '../../components/YoutubeVideo'
 import { GithubProjectList } from './GithubProjectList'
 

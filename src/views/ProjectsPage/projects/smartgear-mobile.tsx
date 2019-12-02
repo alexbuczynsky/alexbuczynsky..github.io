@@ -3,18 +3,7 @@ import React from 'react';
 import { Project } from '../Project'
 import {
   Typography,
-  Link,
-  Divider,
-  GridList,
-  GridListTile,
-  makeStyles,
-  IconButton,
-  Button,
-  ListItem,
-  ListItemIcon,
-  ListItemText
 } from '@material-ui/core'
-import { YoutubeVideo } from '../../../components/YoutubeVideo'
 
 export const SmartGearMobileProject: React.FC = () => {
   return (

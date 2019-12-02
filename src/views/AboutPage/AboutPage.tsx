@@ -8,12 +8,7 @@ import { PersonalLinkedInIcon, PersonalGitHubIcon, PersonalInstagramIcon, Person
 import { GithubProjectList } from '../ProjectsPage/GithubProjectList'
 import { DownloadResumeButton } from '../../components/DownloadResumeButton'
 import { SkillsList } from '../../components/Skills/SkillsList'
-
-async function fetchProjectHighlights(): Promise<ProjectHighlight[]> {
-  const response = await fetch('/data/project_highlights.json');
-  const data = await response.json();
-  return data;
-}
+import { fetchProjectHighlights } from '../../services/data-api'
 
 type State = {
   projects: ProjectHighlight[];
@@ -111,15 +106,17 @@ export const AboutPage: React.FC = () => {
       </Paper>
 
       <Paper className='SummaryWrapper' elevation={1}>
-        <SkillsList />
+        <Typography variant='h4' align='left' gutterBottom>
+          Skills
+        </Typography>
+        <SkillsList hideProgressBar variant='simple' />
       </Paper>
 
 
       <Paper className='SummaryWrapper' elevation={1}>
-        <Typography variant='h4' align='left'>
+        <Typography variant='h4' align='left' gutterBottom>
           Project Highlights
         </Typography>
-        <br />
 
         <GithubProjectList />
         <br />
