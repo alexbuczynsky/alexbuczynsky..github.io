@@ -7,6 +7,7 @@ import './AboutPage.css'
 import { PersonalLinkedInIcon, PersonalGitHubIcon, PersonalInstagramIcon, PersonalTwitterIcon, PersonalEmailIcon } from '../../components/SocialMediaIcons'
 import { GithubProjectList } from '../ProjectsPage/GithubProjectList'
 import { DownloadResumeButton } from '../../components/DownloadResumeButton'
+import { SkillsList } from '../../components/Skills/SkillsList'
 
 async function fetchProjectHighlights(): Promise<ProjectHighlight[]> {
   const response = await fetch('/data/project_highlights.json');
@@ -107,6 +108,10 @@ export const AboutPage: React.FC = () => {
 
           </Grid>
         </Grid>
+      </Paper>
+
+      <Paper className='SummaryWrapper' elevation={1}>
+        <SkillsList />
       </Paper>
 
 
