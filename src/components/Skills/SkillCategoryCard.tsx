@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { HTMLAttributes } from 'react'
 import { Button, Typography, Grid, Card, CardHeader, CardContent, LinearProgress } from '@material-ui/core'
 import { ISkill } from '../../services/data-api'
 import { Skill } from './Skill'
 
 
-type Props = {
+type Props = HTMLAttributes<HTMLDivElement> & {
   category: string;
   skills: ISkill[];
   hideProgressBar?: boolean;
@@ -64,12 +64,13 @@ export const SkillCategoryCard: React.FC<Props> = props => {
     skills,
     hideProgressBar,
     variant = 'default',
+    ...otherProps
   } = props;
 
   const sortedSkills = skills.sort((a, b) => b.percent - a.percent)
 
   return (
-    <Card elevation={4}>
+    <Card elevation={4} {...otherProps} >
       <CardHeader title={category} />
       {
         variant === 'default' ?

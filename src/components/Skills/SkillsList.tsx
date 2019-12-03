@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Button, Typography, Grid, Card, CardHeader, CardContent, LinearProgress } from '@material-ui/core'
+import { Button, Typography, Grid, Card, CardHeader, CardContent, LinearProgress, Grow } from '@material-ui/core'
 import { ButtonProps } from '@material-ui/core/Button'
 import { SkillProgressBar } from './SkillProgressBar'
 import { Skill } from './Skill';
@@ -78,20 +78,22 @@ export const SkillsList: React.FC<Props> = (props) => {
     <Grid container spacing={2}>
 
       {
-        categoryNames.map(category => {
+        categoryNames.map((category, index) => {
 
           // get the skills and sort by decreasing order of skill proficiency
           const skills = categories[category];
 
           return (
             <Grid key={category} item xs={12} sm={6} md={4}>
-              <SkillCategoryCard
-                key={category}
-                category={category}
-                skills={skills}
-                hideProgressBar={props.hideProgressBar}
-                variant={props.variant}
-              />
+              <Grow in timeout={200 + 250 * index}>
+                <SkillCategoryCard
+                  key={category}
+                  category={category}
+                  skills={skills}
+                  hideProgressBar={props.hideProgressBar}
+                  variant={props.variant}
+                />
+              </Grow>
             </Grid>
           )
         })

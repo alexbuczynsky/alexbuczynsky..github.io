@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Switch } from 'react-router'
-import { Resume } from './views/Home/Resume'
+import { Resume } from './views/Resume/Resume'
 import { ProjectsPage } from './views/ProjectsPage'
 import { ContactPage } from './views/ContactPage'
 import { AboutPage } from './views/AboutPage'
@@ -16,7 +16,7 @@ import {
 import { SkillsPage } from './views/SkillsPage'
 
 
-const Page404 = ({ location }: { location: any }) => (
+const Page404: React.FC<{ location: any }> = ({ location }) => (
   <div>
     <h2>No match found for <code>{location.pathname}</code></h2>
   </div>

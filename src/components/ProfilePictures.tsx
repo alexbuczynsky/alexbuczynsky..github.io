@@ -4,8 +4,8 @@ import { Fade, Grow } from '@material-ui/core';
 
 export const ProfilePicture: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props) => {
   return (
-    <Fade in timeout={500}>
+    <Grow in timeout={800}>
       <img alt='ProfilePicture' {...props} src={headShot} />
-    </Fade>
+    </Grow>
   )
 }
