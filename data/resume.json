@@ -1,0 +1,308 @@
+{
+  "experience": [{
+      "company": {
+        "name": "KyotoCooling",
+        "logo": "https://media-exp1.licdn.com/dms/image/C560BAQFUvqFu-BxhYQ/company-logo_200_200/0?e=1590624000&v=beta&t=hkyv6q2If2XnoRksPXCj9ya8ncPPLOaGA0NhUkGF7u0"
+      },
+      "jobTitle": "Software Engineer",
+      "location": "Dallas, Texas",
+      "start": "January 2020",
+      "end": "Present",
+      "responsibilities": []
+    },
+    {
+      "company": {
+        "name": "Siemens",
+        "logo": "https://media.licdn.com/dms/image/C560BAQFhWaZpyqSMfg/company-logo_100_100/0?e=1582761600&v=beta&t=nTmQan79HbfBI5_Tp951ccDPspceaD7ECH0ig_ekgg0"
+      },
+      "jobTitle": "Software Engineer",
+      "location": "Dallas, Texas",
+      "start": "May 2017",
+      "end": "January 2020",
+      "responsibilities": [
+        "Responsible for the design and implementation of the microservice architecture in Sm@rtGear automation products.",
+        "Lead software developer for the Siemens Edge DCU product.",
+        "Responsible for Mindsphere cloud application development, deployment, and distribution.",
+        "Responsible for developing IOT solutions for Energy Utility Applications."
+      ]
+    },
+    {
+      "company": {
+        "name": "Audi AG",
+        "logo": "https://media.licdn.com/dms/image/C4D0BAQHrHaKN5CBcdA/company-logo_400_400/0?e=1582761600&v=beta&t=VX2w14E9dRhItGxvY0vG-DCxGgw4mxfvgb9EZGwiNKc"
+      },
+      "jobTitle": "Intern",
+      "location": "Ingolstadt, Germany",
+      "start": "May 2016",
+      "end": "November 2016",
+      "responsibilities": [
+        "Involved with the development of the Audi Automated Guided vehicle (AGV) for use in assembly line production at Audi, AG.",
+        "Developed a software application to track an automated guided vehicle AGV using both indoor and outdoor localization, providing a way to dynamically start the robot from any position in a production environment by interpolating wireless and bluetooth signals."
+      ],
+      "seeMoreUrl": "https://vdmaimpulse.org/article/-/article/render/125593"
+    },
+    {
+      "company": {
+        "name": "Pharmaworks Inc",
+        "logo": "https://media.licdn.com/dms/image/C560BAQFXGWmdQXQC6g/company-logo_100_100/0?e=1582761600&v=beta&t=Vaos6CefighpdyQpDG8Qegsa3r-tw3jWiM74YHd-Msw"
+      },
+      "jobTitle": "CAD Systems Automation Specialist",
+      "location": "Odessa, Florida",
+      "start": "May 2015",
+      "end": "May 2017",
+      "responsibilities": [
+        "Responsible for automating the workflow of Mechanical Engineers working on Thermoforming Machines.",
+        "Using a plugin for Solidworks called Driveworks, a program was created that automated the parts, assemblies, and drawings for an entire assembly line."
+      ],
+      "seeMoreUrl": "https://goo.gl/ncji2Z"
+    },
+    {
+      "company": {
+        "name": "Pharmaworks Inc",
+        "logo": "https://media.licdn.com/dms/image/C560BAQFXGWmdQXQC6g/company-logo_100_100/0?e=1582761600&v=beta&t=Vaos6CefighpdyQpDG8Qegsa3r-tw3jWiM74YHd-Msw"
+      },
+      "jobTitle": "Intern",
+      "location": "Odessa, Florida",
+      "start": "Jun 2010",
+      "end": "Jun 2015",
+      "responsibilities": [
+        "Responsible for creating immersive CAD based training animations using Solidworks Composer",
+        "Worked in several areas including, but not limited to, the departments of mechanical engineering, shipping, IT, inventory, machine assembly, and machine shop.",
+        "Worked as an assembly technician and machine shop apprentice"
+      ],
+      "seeMoreUrl": "https://www.youtube.com/watch?v=WISv2bJhNL8&feature=emb_title"
+    }
+  ],
+  "projects": {
+    "highlights": [{
+        "projectName": "Siemens Sm@rtGear Pro",
+        "projectDescription": "Historically integrated remote monitoring, configuration, and control have only been available with the inclusion of upstream PMCS, PCS, DCS, or SCADA systems.With the advent of Siemens Sm@rtGear™ technology, remote monitoring, configuration, and control are standard features that are integral to the electrical apparatus product.",
+        "linkURL": "https://new.siemens.com/us/en/products/energy/low-voltage/smart-technology.html",
+        "imageURL": "https://assets.new.siemens.com/siemens/assets/api/uuid:1a1739fc-38e1-41c2-b53d-41c6377c0220/width:640/quality:high/version:1567171245/smarttechnology.png"
+      },
+      {
+        "projectName": "Audi \"Paula\" AGV",
+        "projectDescription": "Involved with the development of Audi's self-developed automated guided vehicle (AGV) for use in assembly line production at Audi, AG. The scope of the project is part of the vision of Industry 4.0.",
+        "linkURL": "https://www.automotiveit.eu/54697-2/news/id-0054697",
+        "imageURL": "/images/projects/Audi_Dialoge_Web_17_01_Startseite_PaulaonTour.jpg"
+      },
+      {
+        "projectName": "Siemens Sm@rtGear Mobile",
+        "projectDescription": "The Android / iOS SmartGear Mobile App is for owners of low voltage switchgear and switchboards. Using this app, users can monitor, control and configure these devices enabling the users to undertake start up, trouble shoot and perform certain maintenance of them safely away from the arc flash boundary of the equipment.",
+        "linkURL": "https://apps.apple.com/us/app/smartgear-mobile/id1467350072",
+        "imageURL": "https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/27/e7/70/27e770d7-397d-734f-b0f5-0866866318f2/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-7.png/690x0w.png"
+      },
+      {
+        "projectName": "Opensource Project \"jsmodbus\"",
+        "projectDescription": "jsmodbus is a simple Modbus TCP/RTU Client/Server with a simple API. It supports modbus function codes 1 - 6 and 15 and 16.",
+        "linkURL": "https://github.com/Cloud-Automation/node-modbus/tree/v4.0-dev",
+        "imageURL": "/images/js-modbus-logo.jpg"
+      }
+    ],
+    "github": [
+
+      {
+        "projectName": "jsmodbus",
+        "projectLink": "https://github.com/Cloud-Automation/node-modbus",
+        "npmName": "jsmodbus",
+        "role": "Maintainer",
+        "description": "A Typescript library for communicating via the modbus protocol."
+      },
+      {
+        "projectName": "Node Buffer Tools",
+        "projectLink": "https://github.com/alexbuczynsky/node-buffer-tools",
+        "npmName": "ts-buffer-tools",
+        "role": "Owner",
+        "description": "A Typescript library for manipulating buffer data."
+      },
+      {
+        "projectName": "This Website",
+        "projectLink": "https://github.com/alexbuczynsky/alexbuczynsky.github.io",
+        "description": "See the code that created this website. Written in Typescript using the React.js library."
+      }
+
+    ]
+
+  },
+  "skills": [
+
+    {
+      "category": "Programming Languages",
+      "name": "TypeScript",
+      "percent": 95
+    },
+    {
+      "category": "Programming Languages",
+      "name": "JavaScript",
+      "percent": 95
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Node.js",
+      "percent": 95
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Matlab",
+      "percent": 80
+    },
+    {
+      "category": "Programming Languages",
+      "name": "C# (.Net Core)",
+      "percent": 85
+    },
+    {
+      "category": "Programming Languages",
+      "name": "C# (.Net Frameworks)",
+      "percent": 70
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Golang",
+      "percent": 45
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Python",
+      "percent": 50
+    },
+    {
+      "category": "Programming Languages",
+      "name": "SQL",
+      "percent": 86
+    },
+
+    {
+      "category": "Back-End Development",
+      "name": "Docker",
+      "percent": 95
+    },
+    {
+      "category": "Back-End Development",
+      "name": "Docker Compose",
+      "percent": 88
+    },
+    {
+      "category": "Back-End Development",
+      "name": "MongoDB",
+      "percent": 75
+    },
+    {
+      "category": "Back-End Development",
+      "name": "PostgreSQL",
+      "percent": 95
+    },
+    {
+      "category": "Back-End Development",
+      "name": "TimescaledDB",
+      "percent": 90
+    },
+    {
+      "category": "Back-End Development",
+      "name": "Express.js",
+      "percent": 90
+    },
+    {
+      "category": "Back-End Development",
+      "name": "Nest.js",
+      "percent": 90
+    },
+    {
+      "category": "Back-End Development",
+      "name": "Microsoft.AspNetCore.Mvc",
+      "percent": 90
+    },
+    {
+      "category": "Back-End Development",
+      "name": "OpenAPI (Swagger)",
+      "percent": 90
+    },
+
+    {
+      "category": "Front-End Development",
+      "name": "HTML / CSS",
+      "percent": 50
+    }, {
+      "category": "Front-End Development",
+      "name": "Bootstrap",
+      "percent": 50
+    }, {
+      "category": "Front-End Development",
+      "name": "Sass",
+      "percent": 50
+    }, {
+      "category": "Front-End Development",
+      "name": "Jquery",
+      "percent": 95
+    }, {
+      "category": "Front-End Development",
+      "name": "React.js",
+      "percent": 98
+    }, {
+      "category": "Front-End Development",
+      "name": "React Native",
+      "percent": 82
+    },
+    {
+      "category": "DevOps & CI / CD",
+      "name": "Grafana",
+      "percent": 75
+    },
+    {
+      "category": "DevOps & CI / CD",
+      "name": "Git",
+      "percent": 98
+    },
+    {
+      "category": "DevOps & CI / CD",
+      "name": "Jenkins",
+      "percent": 80
+    },
+    {
+      "category": "DevOps & CI / CD",
+      "name": "Prometheus",
+      "percent": 45
+    },
+    {
+      "category": "DevOps & CI / CD",
+      "name": "GitLab CI/CD",
+      "percent": 89
+    },
+
+    {
+      "category": "Communication Protocols",
+      "name": "MQTT",
+      "percent": 90
+    },
+    {
+      "category": "Communication Protocols",
+      "name": "HTTP / HTTPS",
+      "percent": 95
+    },
+    {
+      "category": "Communication Protocols",
+      "name": "Modbus",
+      "percent": 90
+    },
+    {
+      "category": "Communication Protocols",
+      "name": "S7",
+      "percent": 80
+    },
+    {
+      "category": "Communication Protocols",
+      "name": "Protobuf",
+      "percent": 55
+    },
+    {
+      "category": "Communication Protocols",
+      "name": "Web Sockets",
+      "percent": 80
+    },
+    {
+      "category": "Communication Protocols",
+      "name": "TCP/IP",
+      "percent": 88
+    }
+  ]
+}
