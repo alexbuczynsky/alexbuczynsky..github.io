@@ -1,30 +1,5 @@
-import { ProjectHighlight } from "../views/AboutPage/ProjectHighlightCard";
 import { GithubProjectListItemProps } from "../views/ProjectsPage/GithubProjectListItem";
-
-
-/**
- * Fetches the project highlights
- *
- * @export
- * @returns {Promise<ProjectHighlight[]>}
- */
-export async function fetchProjectHighlights(): Promise<ProjectHighlight[]> {
-  const response = await fetch('/data/project_highlights.json');
-  const data = await response.json();
-  return data;
-}
-
-/**
- * Fetches the github projects
- *
- * @returns {Promise<GithubProjectListItemProps[]>}
- */
-export async function fetchGithubProjects(): Promise<GithubProjectListItemProps[]> {
-  const response = await fetch('/data/github_projects.json');
-  const data = await response.json();
-  return data;
-}
-
+import { useState, useEffect } from "react";
 
 export type ISkill = {
   name: string;
@@ -33,8 +8,62 @@ export type ISkill = {
   subCategory?: string;
 }
 
-export async function fetchSkills(): Promise<ISkill[]> {
-  const response = await fetch('/data/skills.json');
+export type IProjectHighlight = {
+  linkURL: string;
+  projectName?: string;
+  projectDescription?: string;
+  imageURL?: string;
+}
+
+export type IResumeExperience = {
+  company: {
+    name: string
+    logo: string
+  }
+  jobTitle: string
+  location: string
+  start: string
+  end: string
+  responsibilities: string[]
+  seeMoreUrl?: string
+}
+
+export type IResume = {
+  experience: IResumeExperience[]
+  skills: ISkill[]
+  projects: {
+    highlights: IProjectHighlight[]
+    github: GithubProjectListItemProps[]
+  }
+}
+
+
+export async function fetchResume(): Promise<IResume> {
+  const response = await fetch('/data/resume.json');
   const data = await response.json();
   return data;
+}
+
+
+export const useResume = () => {
+  const [isLoading, setIsLoading] = useState(true)
+
+  const [resume, setResume] = useState<IResume>({
+    experience: [],
+    skills: [],
+    projects: {
+      github: [],
+      highlights: []
+    }
+  })
+
+  useEffect(() => {
+    fetchResume()
+      .then((data) => setResume(data))
+      .finally(() => setIsLoading(false))
+  }, [])
+
+  return [resume, {
+    isLoading
+  }] as const
 }

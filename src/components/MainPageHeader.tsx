@@ -1,5 +1,6 @@
 import React from 'react'
-import { Typography, Divider } from '@material-ui/core'
+import Typography from '@material-ui/core/Typography'
+import Divider from '@material-ui/core/Divider'
 
 interface Props {
   title: string;

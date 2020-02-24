@@ -1,47 +1,32 @@
-import React, { useEffect, useState } from 'react'
-import { PageHeaderTypography } from '../../components/MainPageHeader'
-import { Paper, Typography, Grid, LinearProgress, } from '@material-ui/core'
-import { ProfilePicture } from '../../components/ProfilePictures'
-import { ProjectHighlightCard, ProjectHighlight } from './ProjectHighlightCard'
-import './AboutPage.css'
-import { PersonalLinkedInIcon, PersonalGitHubIcon, PersonalInstagramIcon, PersonalTwitterIcon, PersonalEmailIcon } from '../../components/SocialMediaIcons'
-import { GithubProjectList } from '../ProjectsPage/GithubProjectList'
-import { DownloadResumeButton } from '../../components/DownloadResumeButton'
-import { SkillsList } from '../../components/Skills/SkillsList'
-import { fetchProjectHighlights } from '../../services/data-api'
+import React from 'react'
+import Paper from '@material-ui/core/Paper'
+import Typography from '@material-ui/core/Typography'
+import Grid from '@material-ui/core/Grid'
+import LinearProgress from '@material-ui/core/LinearProgress'
 
-type State = {
-  projects: ProjectHighlight[];
-  isLoading: boolean;
-}
+import { ProjectHighlightCard } from './ProjectHighlightCard'
+import { GithubProjectList } from '../ProjectsPage/GithubProjectList'
+
+import {
+  PersonalLinkedInIcon,
+  PersonalGitHubIcon,
+  PersonalInstagramIcon,
+  PersonalTwitterIcon,
+  PersonalEmailIcon
+} from '../../components/SocialMediaIcons'
+
+import { DownloadResumeButton } from '../../components/DownloadResumeButton'
+import { ProfilePicture } from '../../components/ProfilePictures'
+import { PageHeaderTypography } from '../../components/MainPageHeader'
+import { SkillsList } from '../../components/Skills/SkillsList'
+
+import { useResume } from '../../services/data-api'
+
+import './AboutPage.css'
 
 export const AboutPage: React.FC = () => {
 
-  const [state, setState] = useState<State>({
-    isLoading: true,
-    projects: [],
-  });
-
-  useEffect(() => {
-    fetchProjectHighlights()
-      .then(data => {
-        // Wait a little longer to show the data to show the loading effect
-        setTimeout(() => {
-          setState({
-            projects: data,
-            isLoading: false,
-          })
-        }, 750)
-
-      })
-      .catch(err => {
-        setState({
-          ...state,
-          isLoading: false,
-        })
-      })
-  }, [])
-
+  const [state, fetchState] = useResume()
 
   return (
     <div className='AboutPage'>
@@ -81,11 +66,6 @@ export const AboutPage: React.FC = () => {
                 electrical, and digital.
               </p>
 
-              <p>
-                Since May 2017 I have been employed at Siemens creating industrial internet of things automation
-                products that specialize in breaker controls and saftey equipment.
-              </p>
-
             </Typography>
 
             <div className='RowContainer'>
@@ -121,10 +101,10 @@ export const AboutPage: React.FC = () => {
         <GithubProjectList />
         <br />
 
-        <LinearProgress hidden={state.isLoading === false} color='secondary' />
+        <LinearProgress hidden={fetchState.isLoading === false} color='secondary' />
         <Grid container spacing={4} >
 
-          {state.projects.map(project => (
+          {state.projects.highlights.map(project => (
             <Grid item xs={12} sm={6} md={3}>
               <ProjectHighlightCard {...project} />
             </Grid>

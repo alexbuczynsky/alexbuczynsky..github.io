@@ -1,6 +1,6 @@
 import React from 'react';
 import headShot from '../assets/head-shot.jpg';
-import { Fade, Grow } from '@material-ui/core';
+import Grow from '@material-ui/core/Grow';
 
 export const ProfilePicture: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props) => {
   return (

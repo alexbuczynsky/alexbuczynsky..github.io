@@ -1,5 +1,9 @@
 import React, { HTMLAttributes } from 'react'
-import { Button, Typography, Grid, Card, CardHeader, CardContent, LinearProgress } from '@material-ui/core'
+import Typography from '@material-ui/core/Typography'
+import Card from '@material-ui/core/Card'
+import CardHeader from '@material-ui/core/CardHeader'
+import CardContent from '@material-ui/core/CardContent'
+
 import { ISkill } from '../../services/data-api'
 import { Skill } from './Skill'
 

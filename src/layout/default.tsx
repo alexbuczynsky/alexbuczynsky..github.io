@@ -1,8 +1,14 @@
 import React from 'react';
-import { NavBar } from '../components/NavBar';
-import { Container, Fade, makeStyles, Paper } from '@material-ui/core';
 import { Switch } from "react-router";
 import { BrowserRouter } from 'react-router-dom';
+import Container from "@material-ui/core/Container"
+import Fade from "@material-ui/core/Fade"
+import Paper from "@material-ui/core/Paper"
+
+import { makeStyles } from '@material-ui/core/styles';
+
+
+import { NavBar } from '../components/NavBar';
 import { AllRoutes } from '../routes';
 
 

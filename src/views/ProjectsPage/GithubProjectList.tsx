@@ -1,47 +1,23 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Project } from './Project'
-import { Grid, Divider, LinearProgress } from '@material-ui/core'
-import { GithubProjectListItem, GithubProjectListItemProps } from './GithubProjectListItem'
-import { fetchGithubProjects } from '../../services/data-api'
 
-type State = {
-  projects: GithubProjectListItemProps[];
-  isLoading: boolean;
-}
+import Grid from '@material-ui/core/Grid'
+import Divider from '@material-ui/core/Divider'
+import LinearProgress from '@material-ui/core/LinearProgress'
+
+import { GithubProjectListItem } from './GithubProjectListItem'
+import { useResume } from '../../services/data-api'
 
 export const GithubProjectList: React.FC = () => {
-  const [state, setState] = useState<State>({
-    isLoading: true,
-    projects: [],
-  });
-
-  useEffect(() => {
-    fetchGithubProjects()
-      .then(data => {
-        // Wait a little longer to show the data to show the loading effect
-        setTimeout(() => {
-          setState({
-            projects: data,
-            isLoading: false,
-          })
-        }, 500)
-
-      })
-      .catch(err => {
-        setState({
-          ...state,
-          isLoading: false,
-        })
-      })
-  }, [])
+  const [resume, fetchState] = useResume()
 
   return (
     <Project title='Open Source Projects'>
 
-      <LinearProgress hidden={state.isLoading === false} color='secondary' />
+      <LinearProgress hidden={fetchState.isLoading === false} color='secondary' />
 
       <Grid container spacing={2} style={{ minHeight: '250px' }}>
-        {state.projects.map((project, ii) => (
+        {resume.projects.github.map((project, ii) => (
           <React.Fragment>
             <GithubProjectListItem
               key={project.projectLink}

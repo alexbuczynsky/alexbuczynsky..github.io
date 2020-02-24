@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import { DefaultLayout } from './layout/default';
-import { CssBaseline } from '@material-ui/core';
-import { ThemeProvider } from '@material-ui/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import ThemeProvider from '@material-ui/styles/ThemeProvider';
 import { theme } from './theme';
 import { BackgroundWallpaper } from './components/BackgroundWallpaper';
 

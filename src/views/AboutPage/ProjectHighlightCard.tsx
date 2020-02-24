@@ -6,8 +6,8 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import Grow from '@material-ui/core/Grow';
 import { ExternalLinkDialog } from '../../components/ExternalLinkDialog';
-import { Grow } from '@material-ui/core';
 
 const useStyles = makeStyles({
   card: {

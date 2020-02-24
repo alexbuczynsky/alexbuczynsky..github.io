@@ -1,11 +1,10 @@
 import React from 'react';
 
+import Typography from '@material-ui/core/Typography'
+import Link from '@material-ui/core/Link'
+import Divider from '@material-ui/core/Divider'
+
 import { Project } from '../Project'
-import {
-  Typography,
-  Link,
-  Divider,
-} from '@material-ui/core'
 import { YoutubeVideo } from '../../../components/YoutubeVideo'
 
 export const AudiAGVProject: React.FC = () => {

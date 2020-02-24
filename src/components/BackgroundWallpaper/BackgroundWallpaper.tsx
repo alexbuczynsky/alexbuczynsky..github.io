@@ -1,13 +1,12 @@
 import React from 'react';
-import { useTheme } from '@material-ui/core';
-import { lighten, darken } from '@material-ui/core/styles';
+import { lighten, darken, useTheme } from '@material-ui/core/styles';
 import { NotchedRectangle } from './decorators/NotchedRectangle';
 
 export const BackgroundWallpaper: React.FC = () => {
   const theme = useTheme();
 
 
-  const primaryMain = theme.palette.primary.main;
+  const primaryMain = theme.palette.background.paper;
 
   const style: React.CSSProperties = {
     background: `linear-gradient(30deg, ${darken(primaryMain, 0.65)} 8%, ${darken(primaryMain, 0.2)} 65%, ${lighten(primaryMain, 0.1)} 95%)`,

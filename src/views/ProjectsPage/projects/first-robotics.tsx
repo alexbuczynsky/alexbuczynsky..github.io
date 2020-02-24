@@ -1,16 +1,15 @@
 import React from 'react';
 
+import Typography from '@material-ui/core/Typography'
+import GridList from '@material-ui/core/GridList'
+import GridListTile from '@material-ui/core/GridListTile'
+import { makeStyles } from '@material-ui/core/styles'
+
 import { Project } from '../Project'
-import {
-  Typography,
-  GridList,
-  GridListTile,
-  makeStyles,
-} from '@material-ui/core'
 import { YoutubeVideo } from '../../../components/YoutubeVideo'
 
 
-const useStyles = makeStyles((theme) =>
+const useStyles = makeStyles(() =>
   ({
     gridList: {
       width: '100%',

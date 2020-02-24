@@ -1,5 +1,18 @@
 import React from 'react'
-import { ListItem, ListItemAvatar, Avatar, ListItemText, Typography, makeStyles, createStyles, Chip, List, Paper, Container, ExpansionPanel, ExpansionPanelSummary, Button } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles'
+
+import ListItem from '@material-ui/core/ListItem'
+import ListItemAvatar from '@material-ui/core/ListItemAvatar'
+import Avatar from '@material-ui/core/Avatar'
+import ListItemText from '@material-ui/core/ListItemText'
+import Typography from '@material-ui/core/Typography'
+import Chip from '@material-ui/core/Chip'
+import List from '@material-ui/core/List'
+import Paper from '@material-ui/core/Paper'
+import ExpansionPanel from '@material-ui/core/ExpansionPanel'
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary'
+import Button from '@material-ui/core/Button'
+
 import DateRangeOutlinedIcon from '@material-ui/icons/DateRangeOutlined';
 import LocationCityIcon from '@material-ui/icons/LocationCity';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
@@ -27,6 +40,9 @@ const useStyles = makeStyles((theme) => ({
   responsibilitiesList: {
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
+  },
+  CompanyLogo: {
+    background: '#ffffff'
   }
 }));
 
@@ -48,7 +64,7 @@ export const ExperienceListItem: React.FC<Props> = (props) => {
   return (
     <ListItem>
       <ListItemAvatar>
-        <Avatar alt="Logo" src={props.logoUrl} />
+        <Avatar className={classes.CompanyLogo} alt="Logo" src={props.logoUrl} />
       </ListItemAvatar>
       <Paper className={classes.paperWrapper}>
         <ListItemText

@@ -1,6 +1,9 @@
 import React from 'react'
-import { ListItem, ListItemText, CardHeader, Grid, Card, makeStyles, CardContent, Typography, CardActions, Button } from '@material-ui/core'
-import classes from '*.module.css';
+import { makeStyles } from '@material-ui/core/styles'
+import CardHeader from '@material-ui/core/CardHeader'
+import Grid from '@material-ui/core/Grid'
+import Card from '@material-ui/core/Card'
+import CardContent from '@material-ui/core/CardContent'
 
 const useStyles = makeStyles({
   card: {

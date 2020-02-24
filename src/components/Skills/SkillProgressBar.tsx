@@ -1,7 +1,7 @@
 import React, { CSSProperties } from 'react'
 import {
   makeStyles,
-} from '@material-ui/core'
+} from '@material-ui/core/styles'
 import './SkillProgressBar.css'
 
 import clsx from 'clsx'

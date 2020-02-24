@@ -1,9 +1,6 @@
 import React from 'react'
 import { PageHeaderTypography } from '../../components/MainPageHeader'
-import {
-  Grid,
-} from '@material-ui/core'
-import { YoutubeVideo } from '../../components/YoutubeVideo'
+import Grid from '@material-ui/core/Grid'
 import { GithubProjectList } from './GithubProjectList'
 
 import {

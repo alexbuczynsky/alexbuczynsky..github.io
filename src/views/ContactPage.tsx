@@ -1,7 +1,16 @@
 import React from 'react'
 import { PageHeaderTypography } from '../components/MainPageHeader'
 import { PersonalLinkedInIcon, PersonalGitHubIcon, PersonalInstagramIcon, PersonalTwitterIcon, PersonalEmailIcon } from '../components/SocialMediaIcons'
-import { ListItemAvatar, List, ListItem, ListItemText, Button, makeStyles, Divider, Grow } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles'
+
+import ListItemAvatar from '@material-ui/core/ListItemAvatar'
+import List from '@material-ui/core/List'
+import ListItem from '@material-ui/core/ListItem'
+import ListItemText from '@material-ui/core/ListItemText'
+import Button from '@material-ui/core/Button'
+import Divider from '@material-ui/core/Divider'
+import Grow from '@material-ui/core/Grow'
+
 import PhoneIcon from '@material-ui/icons/Phone';
 
 

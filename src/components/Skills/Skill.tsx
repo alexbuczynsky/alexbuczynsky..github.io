@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { SkillProgressBar, SkillProgressBarProps } from './SkillProgressBar';
-import { Typography } from '@material-ui/core';
+import Typography from '@material-ui/core/Typography';
 import { ThemeStyle } from '@material-ui/core/styles/createTypography';
 
 type Props = {

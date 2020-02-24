@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import { Button, Typography, Grid, Card, CardHeader, CardContent, LinearProgress, Grow } from '@material-ui/core'
-import { ButtonProps } from '@material-ui/core/Button'
-import { SkillProgressBar } from './SkillProgressBar'
-import { Skill } from './Skill';
-import { ISkill, fetchSkills } from '../../services/data-api';
+import React from 'react'
+
+import Grid from '@material-ui/core/Grid'
+import Grow from '@material-ui/core/Grow'
+
+import { ISkill, useResume } from '../../services/data-api';
 import { SkillCategoryCard } from './SkillCategoryCard';
 
 type Props = {
@@ -11,92 +11,56 @@ type Props = {
   variant?: 'default' | 'simple';
 }
 
-type State = {
-  skills: ISkill[];
-}
+type SkillCategory = string
+type SkillCategoryDictionary = Map<SkillCategory, Set<ISkill>>
 
-function sortSkillsByCategory(skills: ISkill[]) {
-  const categories: Record<string, ISkill[]> = {};
+function sortSkillsByCategory(skills: ISkill[]): SkillCategoryDictionary {
+
+  const categories: SkillCategoryDictionary = new Map();
 
   for (const skill of skills) {
     const {
       category,
     } = skill;
 
-    if (!categories[category]) {
-      categories[category] = [];
-    }
+    const categorySkills = categories.get(category) || new Set();
 
-    categories[category].push(skill);
+    categorySkills.add(skill)
+
+    categories.set(category, categorySkills)
   }
 
-  return {
-    categories,
-    categoryNames: Object.keys(categories),
-  };
+  return categories;
 }
 
 
 
 export const SkillsList: React.FC<Props> = (props) => {
 
-  const [state, setState] = useState<State>({
-    skills: [],
-  })
+  const [resume] = useResume()
 
-
-  const loadSkills = () => {
-    return fetchSkills()
-      .then(data => {
-        // Wait a little longer to show the data to show the loading effect
-        // setTimeout(() => {
-        //   setState({
-        //     skills: data,
-        //     isLoading: false,
-        //   })
-        // }, 500)
-        setState({
-          skills: data,
-        })
-
-      })
-      .catch(err => {
-        setState({
-          ...state,
-        })
-      })
-  }
-
-  useEffect(() => {
-    loadSkills();
-    setInterval(() => loadSkills(), 500)
-  }, [])
-
-  const { categories, categoryNames } = sortSkillsByCategory(state.skills);
+  const skillCategories: SkillCategoryDictionary = sortSkillsByCategory(resume.skills);
 
   return (
     <Grid container spacing={2}>
 
       {
-        categoryNames.map((category, index) => {
-
-          // get the skills and sort by decreasing order of skill proficiency
-          const skills = categories[category];
-
-          return (
+        Array
+          .from(skillCategories.entries())
+          .map(([category, skills], index) => (
             <Grid key={category} item xs={12} sm={6} md={4}>
               <Grow in timeout={200 + 250 * index}>
                 <SkillCategoryCard
                   key={category}
                   category={category}
-                  skills={skills}
+                  skills={Array.from(skills.values())}
                   hideProgressBar={props.hideProgressBar}
                   variant={props.variant}
                 />
               </Grow>
             </Grid>
           )
-        })
+          )
       }
 
     </Grid>

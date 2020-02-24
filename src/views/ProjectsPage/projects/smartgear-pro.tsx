@@ -1,9 +1,7 @@
 import React from 'react';
 
+import Typography from '@material-ui/core/Typography'
 import { Project } from '../Project'
-import {
-  Typography,
-} from '@material-ui/core'
 import { YoutubeVideo } from '../../../components/YoutubeVideo'
 
 export const SmartGearProProject: React.FC = () => {
