@@ -21,9 +21,6 @@ export const Resume: React.FC = () => {
   return (
     <div>
       <PageHeaderTypography title='Resume' />
-      {/* <Paper elevation={1}>
-        <ProfilePicture className={classes.profilePicture} />
-      </Paper> */}
 
       <Card>
         <CardActions>
