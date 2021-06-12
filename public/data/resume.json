@@ -133,7 +133,17 @@
 
     {
       "category": "Programming Languages",
+      "name": "Kotlin",
+      "percent": 95
+    },
+    {
+      "category": "Programming Languages",
       "name": "TypeScript",
+      "percent": 95
+    },
+    {
+      "category": "Programming Languages",
+      "name": "Java",
       "percent": 95
     },
     {
@@ -222,7 +232,6 @@
       "name": "OpenAPI (Swagger)",
       "percent": 90
     },
-
     {
       "category": "Front-End Development",
       "name": "HTML / CSS",
@@ -243,7 +252,11 @@
       "category": "Front-End Development",
       "name": "React.js",
       "percent": 98
-    }, {
+    },{
+      "category": "Front-End Development",
+      "name": "Vue",
+      "percent": 70
+    },{
       "category": "Front-End Development",
       "name": "React Native",
       "percent": 82
