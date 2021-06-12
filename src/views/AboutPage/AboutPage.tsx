@@ -57,8 +57,8 @@ export const AboutPage: React.FC = () => {
 
             <Typography variant='body1' align='left'>
               <p>
-                I am an experienced Software Engineer located in Dallas Texas with a demonstrated history of working in the electrical and electronic manufacturing industry.
-                Skilled in Docker, Industrial Communications, Web Development, Microservices, and cloud platforms such as AWS.
+                I am an experienced Software Engineer located in Dallas Texas with a demonstrated history of working in the industrial and building automation industry.
+                Skilled in Control Systems, Docker, Industrial Communications, Web Development, Microservices, and cloud platforms such as AWS.
               </p>
               <p>
                 With a Bachelor of Engineering degree focused in Mechanical Engineering from the
