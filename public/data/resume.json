@@ -2,18 +2,23 @@
   "experience": [{
       "company": {
         "name": "KyotoCooling",
-        "logo": "https://media-exp1.licdn.com/dms/image/C560BAQFUvqFu-BxhYQ/company-logo_200_200/0?e=1590624000&v=beta&t=hkyv6q2If2XnoRksPXCj9ya8ncPPLOaGA0NhUkGF7u0"
+        "logo": "http://www2.kyotocooling.com/wp-content/uploads/2015/12/cleankoyp.png"
       },
       "jobTitle": "Software Engineer",
       "location": "Dallas, Texas",
       "start": "January 2020",
       "end": "Present",
-      "responsibilities": []
+      "responsibilities": [
+        "Responsible for the design and implementation of the industrial embedded controls software platform",
+        "Lead customer data center comissioning and integrated system testing in multiple countries",
+        "Responsbile for evaluating customer requirements and delivering solutions to meet their requirements for their control systems",
+        "Responsbile for desiging systems to communicate and control hardware with diverse industrial communication protocols"
+      ]
     },
     {
       "company": {
         "name": "Siemens",
-        "logo": "https://media.licdn.com/dms/image/C560BAQFhWaZpyqSMfg/company-logo_100_100/0?e=1582761600&v=beta&t=nTmQan79HbfBI5_Tp951ccDPspceaD7ECH0ig_ekgg0"
+        "logo": "https://media.glassdoor.com/sqll/3510/siemens-squarelogo-1602583543827.png"
       },
       "jobTitle": "Software Engineer",
       "location": "Dallas, Texas",
@@ -29,7 +34,7 @@
     {
       "company": {
         "name": "Audi AG",
-        "logo": "https://media.licdn.com/dms/image/C4D0BAQHrHaKN5CBcdA/company-logo_400_400/0?e=1582761600&v=beta&t=VX2w14E9dRhItGxvY0vG-DCxGgw4mxfvgb9EZGwiNKc"
+        "logo": "https://audimediacenter-a.akamaihd.net/system/production/media/1282/images/bde751ee18fe149036c6b47d7595f6784f8901f8/AL090142_full.jpg?1581961854"
       },
       "jobTitle": "Intern",
       "location": "Ingolstadt, Germany",
@@ -44,7 +49,7 @@
     {
       "company": {
         "name": "Pharmaworks Inc",
-        "logo": "https://media.licdn.com/dms/image/C560BAQFXGWmdQXQC6g/company-logo_100_100/0?e=1582761600&v=beta&t=Vaos6CefighpdyQpDG8Qegsa3r-tw3jWiM74YHd-Msw"
+        "logo": "https://media-exp3.licdn.com/dms/image/C4D0BAQE0vduHhn_PDg/company-logo_200_200/0/1592310929788?e=2159024400&v=beta&t=39cf2mcEPLb1ll3Dvcr55UDwQREaiRwTt6h63u4jBTc"
       },
       "jobTitle": "CAD Systems Automation Specialist",
       "location": "Odessa, Florida",
@@ -59,7 +64,7 @@
     {
       "company": {
         "name": "Pharmaworks Inc",
-        "logo": "https://media.licdn.com/dms/image/C560BAQFXGWmdQXQC6g/company-logo_100_100/0?e=1582761600&v=beta&t=Vaos6CefighpdyQpDG8Qegsa3r-tw3jWiM74YHd-Msw"
+        "logo": "https://media-exp3.licdn.com/dms/image/C4D0BAQE0vduHhn_PDg/company-logo_200_200/0/1592310929788?e=2159024400&v=beta&t=39cf2mcEPLb1ll3Dvcr55UDwQREaiRwTt6h63u4jBTc"
       },
       "jobTitle": "Intern",
       "location": "Odessa, Florida",
