@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { IframeHTMLAttributes } from 'react';
 
 type Props = {
   videoURL: string;
@@ -8,15 +8,15 @@ type Props = {
 
 export const YoutubeVideo: React.FC<Props> = (props) => {
 
-  const width = props.width || '560';
+  const width: string = props.width || '560';
 
-  const iframeProps: any = {
+  const iframeProps: IframeHTMLAttributes<HTMLIFrameElement> = {
     width: width,
     height: props.height,
     src: props.videoURL,
-    frameborder: "0",
+    frameBorder: "0",
     allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-    allowfullscreen: 'true',
+    allowFullScreen: true,
   };
 
   return (
